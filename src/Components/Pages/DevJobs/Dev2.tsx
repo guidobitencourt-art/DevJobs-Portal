@@ -2,33 +2,33 @@ import TarjetaEmpleo from "./TarjetaEmpleo"
 
 const Dev2 = () => {
 
-  const ofertas = [
+  const ofertas: Array<{ id: number; titulo: string; empresa: string; modalidad: 'remoto' | 'presencial'; esUrgente: boolean }> = [
     {
       id: 1,
       titulo: "Frontend Developer",
       empresa: "TechNova",
-      modalidad: "Remoto",
+      modalidad: "remoto",
       esUrgente: true
     },
     {
       id: 2,
       titulo: "Backend Developer",
       empresa: "CodeWorks",
-      modalidad: "Presencial",
+      modalidad: "presencial",
       esUrgente: false
     },
     {
       id: 3,
       titulo: "Full Stack Developer",
       empresa: "DevSolutions",
-      modalidad: "Remoto",
+      modalidad: "remoto",
       esUrgente: false
     },
     {
       id: 4,
       titulo: "React Developer",
       empresa: "StartupX",
-      modalidad: "Presencial",
+      modalidad: "presencial",
       esUrgente: true
     }
   ];
@@ -40,6 +40,7 @@ const Dev2 = () => {
       {ofertas.map((oferta) => (
         <TarjetaEmpleo
           key={oferta.id}
+          id={oferta.id}
           titulo={oferta.titulo}
           empresa={oferta.empresa}
           modalidad={oferta.modalidad}

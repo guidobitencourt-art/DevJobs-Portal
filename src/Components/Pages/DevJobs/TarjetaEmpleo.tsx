@@ -8,46 +8,53 @@
 interface TarjetaEmpleo {
     id: number;
     titulo: string;
+    empresa: string;
     modalidad: 'remoto' | 'presencial';
     esUrgente: boolean;
 }
 
-const jobs: TarjetaEmpleo[] = [
-    {
-        id: 1,
-        titulo: 'Desarrollador Frontend',
-        modalidad: 'remoto',
-        esUrgente: true,
-    },
-    {
-        id: 2,
-        titulo: 'Diseñador UX/UI',
-        modalidad: 'presencial',
-        esUrgente: false,
-    },
-    {
-        id: 3,
-        titulo: 'Desarrollador Backend',
-        modalidad: 'remoto',
-        esUrgente: false,
-    },
-    {
-        id: 4,
-        titulo: 'Project Manager',
-        modalidad: 'presencial',
-        esUrgente: true,
-    }
-]
+// optional sample data, not used directly
+// const jobs: TarjetaEmpleo[] = [
+//     {
+//         id: 1,
+//         titulo: 'Desarrollador Frontend',
+//         empresa: 'TechNova',
+//         modalidad: 'remoto',
+//         esUrgente: true,
+//     },
+//     {
+//         id: 2,
+//         titulo: 'Diseñador UX/UI',
+//         empresa: 'CodeWorks',
+//         modalidad: 'presencial',
+//         esUrgente: false,
+//     },
+//     {
+//         id: 3,
+//         titulo: 'Desarrollador Backend',
+//         empresa: 'DevSolutions',
+//         modalidad: 'remoto',
+//         esUrgente: false,
+//     },
+//     {
+//         id: 4,
+//         titulo: 'Project Manager',
+//         empresa: 'StartupX',
+//         modalidad: 'presencial',
+//         esUrgente: true,
+//     }
+// ]
 
 const TarjetaEmpleo = (props: TarjetaEmpleo) => {
 
-    const { titulo, modalidad, esUrgente } = props;
+    const { titulo, empresa, modalidad, esUrgente } = props;
 
     return (
         <div>
 
             <h3>{titulo}</h3>
-            {modalidad === 'remoto' ? (
+        <p className="text-sm text-gray-600">{empresa}</p>
+        {modalidad === 'remoto' ? (
                 <div className="badge badge-green">Remoto</div>
             ) : (
                 <div className="badge badge-blue">Presencial</div>
