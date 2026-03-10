@@ -16,6 +16,8 @@ function App() {
           path="/ofertas"
           element={
             <TarjetaEmpleo
+              titulo="Desarrollador Frontend"
+              compañia="Tech Solutions"
               modalidad="remoto"
               esUrgente={true}
             />
