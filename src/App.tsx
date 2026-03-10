@@ -1,11 +1,12 @@
-import { Link, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import Dev2 from './Components/DevJobs/Dev2'
 import TarjetaEmpleo from './Components/DevJobs/TarjetaEmpleo'
 
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
+      <div>
       <nav>
         <Link to="/">Inicio</Link> | <Link to="/ofertas">Ofertas</Link>
       </nav>
@@ -25,6 +26,7 @@ function App() {
         />
       </Routes>
     </div>
+    </BrowserRouter>
   )
 }
 
