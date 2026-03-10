@@ -22,11 +22,16 @@ const TarjetaEmpleo = (props: TarjetaEmpleo) => {
                 <h3 className="text-lg font-bold">{titulo}</h3>
                 <p className="text-gray-600">{compañia}</p>
             </div>
-            {modalidad === 'remoto' ? (
+            <div className="flex items-center gap-2">
+                <span className= {`px-2 py-1 rounded-full text-sm font-semibold"
+                ${modalidad === 'remoto' ? (
                 <div className="badge badge-green">Remoto</div>
             ) : (
                 <div className="badge badge-blue">Presencial</div>
-            )}
+            )}`}
+                ></span>
+            </div>
+           
            
             {esUrgente === true && <p className="text-red-500 font-bold">Urgente</p>}
         </div>
