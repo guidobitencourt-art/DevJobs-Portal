@@ -26,15 +26,18 @@ const TarjetaEmpleo = (props: TarjetaEmpleo) => {
                 <span
                     className={`px-2 py-1 rounded-full text-sm font-semibold ${
                         modalidad === 'remoto'
-                            ? <p className="bg-green-100 text-green-700">Remoto</p>
-                            : <p className="bg-blue-100 text-blue-700">Presencial</p>
+                            ? 'bg-green-100 text-green-700'
+                            : 'bg-blue-100 text-blue-700'
                     }`}
                 >
+                    {modalidad === 'remoto' ? 'Remoto' : 'Presencial'}
                 </span>
                
             </div>
            
-            {esUrgente === true && <p className="text-red-500 font-bold">Urgente</p>}
+            <div className="mt-2">
+                {esUrgente === true && <p className="text-red-500 font-bold">Urgente</p>}
+            </div>
         </div>
     )
 
