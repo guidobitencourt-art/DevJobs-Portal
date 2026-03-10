@@ -6,20 +6,17 @@
 
 
 interface TarjetaEmpleo {
-    id: number;
-    titulo: string;
+ 
     modalidad: 'remoto' | 'presencial';
     esUrgente: boolean;
 }
 
 const TarjetaEmpleo = (props: TarjetaEmpleo) => {
 
-    const { titulo, modalidad, esUrgente } = props;
+    const { modalidad, esUrgente } = props;
 
     return (
         <div>
-
-            <h3>{titulo}</h3>
             {modalidad === 'remoto' ? (
                 <div className="badge badge-green">Remoto</div>
             ) : (
