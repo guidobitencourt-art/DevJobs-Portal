@@ -12,33 +12,6 @@ interface TarjetaEmpleo {
     esUrgente: boolean;
 }
 
-const jobs: TarjetaEmpleo[] = [
-    {
-        id: 1,
-        titulo: 'Desarrollador Frontend',
-        modalidad: 'remoto',
-        esUrgente: true,
-    },
-    {
-        id: 2,
-        titulo: 'Diseñador UX/UI',
-        modalidad: 'presencial',
-        esUrgente: false,
-    },
-    {
-        id: 3,
-        titulo: 'Desarrollador Backend',
-        modalidad: 'remoto',
-        esUrgente: false,
-    },
-    {
-        id: 4,
-        titulo: 'Project Manager',
-        modalidad: 'presencial',
-        esUrgente: true,
-    }
-]
-
 const TarjetaEmpleo = (props: TarjetaEmpleo) => {
 
     const { titulo, modalidad, esUrgente } = props;
