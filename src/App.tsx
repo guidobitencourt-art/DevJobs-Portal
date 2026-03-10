@@ -1,13 +1,35 @@
+import React from 'react'
 import './App.css'
+import Dev2 from './Components/DevJobs/Dev2'
+import TarjetaEmpleo from './Components/DevJobs/TarjetaEmpleo'
 import { BrowserRouter, Routes, Route, Link, NavLink } from 'react-router-dom';
 import Home from './Pages/Home/Home'
 import Offer from './Pages/Offer/Offer'
 
-import Dev2 from "./Components/DevJobs/Dev2";
-
 
 const App = () => {
   return (
+    <div>
+      <nav>
+        <Link to="/">Inicio</Link> | <Link to="/ofertas">Ofertas</Link>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Dev2 />} />
+        <Route
+          path="/ofertas"
+          element={
+            <TarjetaEmpleo
+              id={1}
+              titulo="Desarrollador Frontend"
+              modalidad="remoto"
+              esUrgente={true}
+            />
+          }
+        />
+      </Routes>
+    </div>
+  )
     <BrowserRouter>
       {/* Barra de navegación */}
       <nav className="bg-pink-600 px-8 py-4 flex gap-6 items-center shadow-md">
