@@ -9,22 +9,23 @@ function App() {
   return (
     <BrowserRouter>
       {/* Barra de navegación */}
-      <nav className="p-4 bg-indigo-600 text-white flex gap-4 shadow-lg">
-        <Link to="/" className="hover:underline font-bold">Home</Link>
-        <Link to="/Offer" className="hover:underline font-bold">Offer</Link>
+      <nav className="bg-pink-600 px-8 py-4 flex gap-6 items-center shadow-md">
+        <Link to="/" className="px-3 py-1 rounded-md text-white font-semibold hover:bg-pink-400 transition">Home</Link>
+        <Link to="/offer" className="px-3 py-1 rounded-md text-white font-semibold hover:bg-pink-400 transition">Offer</Link>
       </nav>
 
-      {/* Path */}
-      <div className="p-10">
+      {/* Rutas */}
+      <div className="p-8 bg-gray-100 min-h-screen">
         <Routes>
-          <Route path='/' element={<Home/>}></Route>
-          <Route path='/offer' element={<Offer />}></Route>
-        {/* 404 - Si no encuentra la ruta */}
-        <Route path='*' element={<h2 className='text-red-500'>404 - Not Found</h2>}></Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/offer" element={<Offer />} />
+          <Route path="*" element={<h2 className="text-center text-2xl font-bold text-red-500">404 - Not Found</h2>} />
         </Routes>
       </div>
 
-    </BrowserRouter>  )
+    </BrowserRouter>
+
+    )
 }
 
 export default App
